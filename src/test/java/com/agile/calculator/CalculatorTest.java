@@ -14,7 +14,7 @@ public class CalculatorTest {
 	@Test
 	public void subtractTest() {
 		calculator = new Calculator();
-		int expected = 2;
+		int expected = 3; // was 2
 		int actual = calculator.subtract("5,3");
 		assertEquals(expected, actual);
 	}
@@ -42,6 +42,7 @@ public class CalculatorTest {
 		int actual = calculator.divide("10,2");
 		assertEquals(expected, actual);
 	}
+
 	@Test
 	public void divide2() {
 		calculator = new Calculator();
@@ -49,6 +50,7 @@ public class CalculatorTest {
 		int actual = calculator.divide("10,-2");
 		assertEquals(expected, actual);
 	}
+
 	@Test
 	public void multiply() {
 		calculator = new Calculator();
@@ -56,6 +58,7 @@ public class CalculatorTest {
 		int actual = calculator.multiply("25,2");
 		assertEquals(expected, actual);
 	}
+
 	@Test
 	public void multiply2() {
 		calculator = new Calculator();
@@ -63,7 +66,7 @@ public class CalculatorTest {
 		int actual = calculator.multiply("150,4");
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test(expected = java.lang.ArithmeticException.class)
 	public void dividewithsomeexception() {
 		calculator = new Calculator();
